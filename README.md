@@ -1,2 +1,2 @@
-# deeplearning
-study deeplearning 
+# DeepLearning
+practice deep learning lecture code 
