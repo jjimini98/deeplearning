@@ -28,7 +28,7 @@ dataY = []
 for i in range(0,len(y)-seq_length):
     _x = x[i:i+seq_length]
     _y = y[i+seq_length]
-    print(_x,"->",_y)
+    # print(_x,"->",_y)
     dataX.append(_x)
     dataY.append(_y)
 
@@ -39,7 +39,7 @@ test_size = len(dataY) - train_size
 
 trainX , testX = np.array(dataX[0:train_size]), np.array(dataX[train_size:len(dataX)])
 trainY , testY = np.array(dataY[0:train_size]) , np.array(dataY[train_size:len(dataY)])
-
+print(trainY[0])
 
 X = tf.placeholder(tf.float32, [None, seq_length, data_dim])
 Y = tf.placeholder(tf.float32, [None, 1])
@@ -77,4 +77,3 @@ with tf.Session() as sess :
 
         plt.show()
 
-    print(test_predict)
